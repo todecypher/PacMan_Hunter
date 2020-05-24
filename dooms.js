@@ -1,6 +1,6 @@
 
 //Help taken from Coding Train Youtube Channel - Daniel Shiffman
-//Author : Satyajit Singh - todecypher.github.io xinus404@gmail.com
+//Authors : Satyajit Singh - todecypher.github.io xinus404@gmail.com
 //		   Kamal Mehra 	  - kamalmehra.github.io krrish.mehra6@gmail.com
 //		   Swaraj Patel   - swaraj-patel.github.io	swarajpatel001@gmail.com
 
