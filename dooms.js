@@ -1,3 +1,10 @@
+
+//Help taken from Coding Train Youtube Channel - Daniel Shiffman
+//Author : Satyajit Singh - todecypher.github.io xinus404@gmail.com
+//		   Kamal Mehra 	  - kamalmehra.github.io krrish.mehra6@gmail.com
+//		   Swaraj Patel   - swaraj-patel.github.io	swarajpatel001@gmail.com
+
+
 var cols = 27;
 var rows = 27;
 var grid = new Array(rows);
@@ -27,6 +34,7 @@ var ind =0;
 var guardPath = [];
 var indG;
 let slider;
+
 
 
 function removeFromArray(arr, curr){ //can br optimised more
@@ -121,10 +129,6 @@ function Spot(i, j){
 	this.previous = undefined;
 	this.wall = false;
 
-	// if(random(1) < 0.2){
-	// 	this.wall = true;
-	// }
-
 	//this will draw the block on screen
 	this.show = function(col){
 		fill(col);
@@ -152,18 +156,6 @@ function Spot(i, j){
 		if(j > 0){
 			this.neighbors.push(grid[i][j-1]);
 		}
-		// if(i > 0 && j > 0){
-		// 	this.neighbors.push(grid[i-1][j-1]);
-		// }
-		// if(i < cols-1 && j > 0){
-		// 	this.neighbors.push(grid[i+1][j-1]);
-		// }
-		// if(i > 0 && j < rows-1){
-		// 	this.neighbors.push(grid[i-1][j+1]);
-		// }
-		// if(i < cols-1 && j < rows-1){
-		// 	this.neighbors.push(grid[i+1][j+1]);
-		// }
 		
 	}
 }
@@ -386,7 +378,7 @@ function AstarGuard(){
 }
 
 function setup(){
-    createCanvas(700, 700);
+    createCanvas(1024 ,1024);
     console.log('a*');
 
 
@@ -460,9 +452,6 @@ function setup(){
 		}
 	}
 
-	//starting and ending index
-	// start = grid[0][0];
-	// end = grid[cols-1][rows-1];
 	start =grid[pac[1]][pac[0]];
 	end = grid[food[1]][food[0]];
 	
@@ -482,12 +471,11 @@ function setup(){
 	console.log(guardPath);
 
 	 button = createButton('RESET');
-  	button.position(19, 19);
+  	button.position(400, 19);
 	 button.mousePressed(changeBG);
 
 	 slider = createSlider(0, 60, 1);
-	slider.position(10, 10);
-	// slider.style('width', '500px');
+	slider.position(500, 19);
 	
 	
 }
@@ -508,16 +496,7 @@ function draw(){
     level.drawMap(level.current_map);
 
 	target.show(); 
-	pacman.show();
-	for(var i =0 ; i<n_guards;i++)
-		guards[i].show();
-
 	
-    // for(var i = 0; i < path.length; i++){
-    // 	path[i].show(color(0,0,255));
-    // }
-
-    
     if(ind >=0){
 	
     var pri = path[ind];
@@ -532,10 +511,8 @@ function draw(){
      var x = pri.i*level.cell_w + level.cell_w/2;
     var y = pri.j*level.cell_h + level.cell_h/2;
    	rect(x,y, level.cell_w, level.cell_h);
-   	// setup();
+  
    }
-
-
 
    if(indG >=0){
 	
@@ -555,7 +532,7 @@ function draw(){
     noStroke();
     fill(0,255,0);
    	rect(x,y, level.cell_w, level.cell_h);
-   	// setup();
+
    }
 
 }

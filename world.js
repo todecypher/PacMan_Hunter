@@ -1,3 +1,6 @@
+
+//Author : https://github.com/JayMcDaniel
+//Functions changed by me;
 function Wall(x, y, w, h, level_num) {
     this.type = "wall";
     this.x = x;
@@ -76,9 +79,6 @@ function PowerPellet(x, y, w, h) {
 
 }
 
-
-
-
 function Level(level_num, players_num) {
 
     this.players_num = players_num;
@@ -115,19 +115,6 @@ function Level(level_num, players_num) {
                 } else if (cell == " ") {
                     this.pellets.push(new Pellet(x * this.cell_w, y * this.cell_h, this.cell_w, this.cell_h ,0));
 
-                    //pacman start spot
-                // } else if (cell == "P" && level.level_num === 1) {
-
-                //     pacmans.push(new Pacman(pacmans.length + 1, x * this.cell_w + this.cell_w / 2, y * this.cell_h + this.cell_h / 2, this.cell_w, this.cell_h));
-
-                //     //ghost start spot
-                // } 
-                // else if (cell == "G") {
-                //     var speed = [1.5, 2, 2, 2.5, 2.5, 2.5, 3][level.level_num - 1] || 3;
-                //     var scared_time = 5500 - (this.level_num * 500) > 500 ? 5500 - (this.level_num * 500) : 500;
-                //     ghosts.push(new Ghost(ghosts.length, x * this.cell_w + this.cell_w / 2, y * this.cell_h + this.cell_h / 2, this.cell_w, this.cell_h, level.level_num, speed, scared_time));
-
-                //     //Power Pellets
                  } 
                 else if (cell == "0") {
                     this.power_pellets.push(new PowerPellet(x * this.cell_w, y * this.cell_h, this.cell_w, this.cell_h));
@@ -137,8 +124,6 @@ function Level(level_num, players_num) {
 
         }
 
-
-        //if only 1 player, remove second pacman
         if (this.players_num === 1 && this.level_num === 1) {
             pacmans.pop();
         }
@@ -182,39 +167,10 @@ function Level(level_num, players_num) {
                 newLevel(this.level_num);
         }
 
-
-
     };
 
 
     //Ws are walls, blanks are halls (pellets, 1s are powerups)
-        // this.blueprint1 = ["WWWWWWWWWWWWWWWWWWWWWWWWWWW",
-        //                    "W           WWW           W",
-        //                    "W W WWWWWWW WWW WWWWWWW W W",
-        //                    "W W                     W W",
-        //                    "W W WWW WWWW W WWWW WWW W W",
-        //                    "W W          W          W W",
-        //                    "W WWWWW WWWW W WWWW WWWWW W",
-        //                    "W       W    W    W       W",
-        //                    "W WWWWW W WWWWW W W WWWWW W",
-        //                    "W       W W     W W       W",
-        //                    "WWWWW W W W WWWWW W W WWWWW",
-        //                    "WWWWW W W         W W WWWWW",
-        //                    "WWWWW W W WWWWWWW W W WWWWW",
-        //                    "WWWWW                 WWWWW",
-        //                    "WWWWW W W WWWWWWW W W WWWWW",
-        //                    "WWWWW W W         W W WWWWW",
-        //                    "WWWWW W W WWWWWWW W W WWWWW",
-        //                    "W       W    W    W       W",
-        //                    "W WWWWW W WW W WW W WWWWW W",
-        //                    "W                         W",
-        //                    "W WWWWW W W W WWWWW W W W W",
-        //                    "W W   W W W W W   W W W W W",
-        //                    "W W W W W W W W W W W W W W",
-        //                    "W W W W W   W W W W W   W W",
-        //                    "W W W W WWWWW W W W WWWWW W",
-        //                    "W                         W",
-        //                    "WWWWWWWWWWWWWWWWWWWWWWWWWWW"];
 
     this.blueprint1 = ["WWWWWWWWWWWWWWWWWWWWWWWWWWW",
                        "W           WWW           W",
