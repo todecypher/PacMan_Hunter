@@ -3,6 +3,7 @@
 //Authors : Satyajit Singh - todecypher.github.io xinus404@gmail.com
 //		   Kamal Mehra 	  - kamalmehra.github.io krrish.mehra6@gmail.com
 //		   Swaraj Patel   - swaraj-patel.github.io	swarajpatel001@gmail.com
+//		    Narendra      - narendra2000.github.io 	narendra.yadav789789@gmail.com
 
 
 var cols = 27;
@@ -18,6 +19,8 @@ var path = [];
 var blueprint;
 var level;
 var G;
+
+
 
 var target;
 var pacman;
@@ -534,6 +537,19 @@ function draw(){
    	rect(x,y, level.cell_w, level.cell_h);
 
    }
+	/*var cols = 27;
+var rows = 27;
+var grid = new Array(rows);
+var openSet = [];
+var closedSet = [];
+var start;
+var end;
+var w;
+var h;
+var path = [];
+var blueprint;
+var level;
+var G;*/
 
 }
 
